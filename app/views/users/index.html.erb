@@ -1,10 +1,14 @@
 <!-- app/views/users/index.html.erb -->
+<h2>User Index</h2>
 <table border="1">
   <% @users.each do |ab| %>
     <tr>
       <td> <%= ab.first_name %> <%= ab.last_name %> </td>
+      <td> <%= ab.username %> 
     </tr>
   <% end %>
+
 </table>
+</td><br />
 <%= link_to "Add Users", :controller => "users", :action => "new" %>
 <%= link_to "Edit User", :controller => "users", :action => "chooseUser" %>

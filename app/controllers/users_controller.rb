@@ -35,6 +35,7 @@ class UsersController < ApplicationController
       redirect_to :controller => "users", :action => "index"
     else
       render :action => "edit"
+    end
   end
   
   def index
