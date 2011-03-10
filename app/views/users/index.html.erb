@@ -1,0 +1,10 @@
+<!-- app/views/users/index.html.erb -->
+<table border="1">
+  <% @users.each do |ab| %>
+    <tr>
+      <td> <%= ab.first_name %> <%= ab.last_name %> </td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "Add Users", :controller => "users", :action => "new" %>
+<%= link_to "Edit User", :controller => "users", :action => "chooseUser" %>

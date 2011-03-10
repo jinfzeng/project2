@@ -1,0 +1,12 @@
+<!-- app/views/users/edit.html.erb -->
+<h2>Edit user</h2>
+<%= form_for @user, :url => { :action => "update" } do |f| %>
+    <%= f.label "First name: " %>
+    <%= f.text_field :first_name %><br />
+    <%= f.label "Last name: " %>
+    <%= f.text_field :last_name %><br />
+    <%= f.label "Username: " %>
+    <%= f.text_field :username %><br />
+    <%= f.hidden_field :uid %>
+    <%= f.submit "Submit" %>
+<% end %>

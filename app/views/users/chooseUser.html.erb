@@ -1,0 +1,7 @@
+<!-- app/views/users/chooseUser.html.erb -->
+<h2>Choose user to edit</h2>
+  <%= form_for :uid, :url => {:action => "edit"} do |f|%>
+    <%= f.collection_select @user, @users, :uid, :username,
+      options = {:prompt => "Choose a user"}, :class => "user" %><br />
+    <%= f.submit "Submit" %>
+  <% end %>

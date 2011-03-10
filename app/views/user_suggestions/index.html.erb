@@ -1,0 +1,9 @@
+<!-- app/views/user_suggestions/index.html.erb -->
+<table border="1">
+  <% @usersuggestions.each do |ab| %>
+    <tr>
+      <td> <%= ab.first_name %> <%= ab.last_name %> </td>
+      <td> <%= ab.suggestion %> </td>
+    </tr>
+  <% end %>
+</table>
