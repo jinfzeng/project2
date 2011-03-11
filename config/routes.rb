@@ -19,4 +19,14 @@ Project2::Application.routes.draw do
 
   get "user_suggestions/index"
   
+  get "user_suggestions/new"
+  
+  get "user_suggestions/create"
+  match "user_suggestions/create" => "user_suggestions#create"
+  
+  get "user_suggestions/chooseSug"
+  match "user_suggestions/chooseSug" => "user_suggestions#chooseSug"
+  
+  get "user_suggestions/edit"
+  
 end

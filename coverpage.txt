@@ -1,0 +1,55 @@
+github link: github.com/jinfzeng/project2
+
+my database include pgcrypto.sql
+
+load scripts:
+  createTables.sql   =>   addInsertFuncs.sql   =>   
+  addAuthenticationFuncs.sql   =>   loadInitData.sql
+  
+
+Scripts:
+  createTables.sql -- creates users table, suggestions table,
+                      user_suggestion table, and 
+                      user_suggestiion_view
+                      
+  addInsertFuncs.sql -- adds functions to aid in inserting
+                        data in tables, makes it passible to
+                        to load loadInitData.sql
+                        
+  addAuthenticationFuncs.sql -- adds function and rule to aid
+                                in authentication, encry password
+                                
+  loadInitData.sql --  load default user record in database
+  
+  
+important files
+
+app/models/
+suggestion.rb  user.rb  user_suggestion.rb
+
+app/controllers/
+application_controller.rb  pages_controller.rb  users_controller.rb  user_suggestions_controller.rb
+
+app/views/layouts:
+application.html.erb
+
+app/views/pages:
+continue.html.erb  login.html.erb  logout.html.erb
+
+app/views/users:
+chooseUser.html.erb  edit.html.erb  index.html.erb  new.html.erb
+
+
+
+feature:
+the login page work correcly    
+  admin username: jinzeng
+  password: password
+
+administrator is able the create, edit user account correctly
+
+the public view page working well
+
+my program is unable to insert suggestion in to the database by some error
+
+I did properly assigned privilege to different users

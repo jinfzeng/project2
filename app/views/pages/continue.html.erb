@@ -1,8 +1,13 @@
 <!-- app/views/pages/continue.html.erb -->
 <h2>You are logged in</h2>
 <% if cookies.signed[:user_id] == 1 %>
-  <%= link_to "Continue", :controller => "users", :action => "index" %>
+  <%= link_to "Account Management", :controller => "users", 
+    :action => "index" %><br />
+  <%= link_to "Suggestion Management", :controller => "user_suggestions", 
+    :action => "index" %><br /><br />
+  <%= link_to "Logout", :controller => "pages", 
+    :action => "logout" %>  
 <% else %>
-  <%= link_to "Main", :controller => "author_books",
+  <%= link_to "Main", :controller => "users",
     :action => "index" %>
 <% end %>

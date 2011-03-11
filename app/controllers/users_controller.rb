@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = User.find(params[:uid])
+    @user = User.find(params[:id])
   end
   
   def chooseUser
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:user][:uid])
+    @user = User.find(params[:user][:id])
     if @user.update_attributes(:first_name => params[:user][:first_name],
       :last_name => params[:user][:last_name],:username => params[:user][:username])
       redirect_to :controller => "users", :action => "index"

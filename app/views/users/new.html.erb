@@ -1,15 +1,18 @@
 <!-- app/views/users/new.html.erb -->
-<%= form_for :user, :url => { :action => "create" } do |f| %>
-  <%= f.label "First name: " %><%= f.text_field :first_name %><br />
-  <%= f.label "Last name: " %><%= f.text_field :last_name %><br />
-  <%= f.label "Username: " %><%= f.text_field :username %><br />
-  <%= f.label "Password: " %><%= f.password_field :password %><br />
-  <%= f.label "Division: " %><%= f.radio_button :division, 2 %> Division A
-  <%= f.radio_button :division, 3 %> Division B<br />
-  <%= f.label "Department : " %><%= f.radio_button :department, 2 %> Department 1
-  <%= f.radio_button :department, 3 %> Department 2
-  <%= f.radio_button :department, 4 %> All Departments(if selected, do not select Normal user below)<br />
-  <%= f.label "User type : " %><%= f.radio_button :usertype, 2 %> Manager
-  <%= f.radio_button :usertype, 3 %> Normal user<br />
-  <%= f.submit "Submit" %>
+<% if cookies.signed[:user_id] == 1 %>
+  <%= form_for :user, :url => { :action => "create" } do |f| %>
+    <%= f.label "First name: " %><%= f.text_field :first_name %><br />
+    <%= f.label "Last name: " %><%= f.text_field :last_name %><br />
+    <%= f.label "Username: " %><%= f.text_field :username %><br />
+    <%= f.label "Password: " %><%= f.password_field :password %><br />
+    <%= f.label "Division: " %><%= f.radio_button :division, 2 %> Division A
+    <%= f.radio_button :division, 3 %> Division B<br />
+    <%= f.label "Department : " %><%= f.radio_button :department, 2 %> Department 1
+    <%= f.radio_button :department, 3 %> Department 2
+    <%= f.radio_button :department, 4 %> All Departments(if selected, do not 
+      select Normal user below)<br />
+    <%= f.label "User type : " %><%= f.radio_button :usertype, 2 %> Manager
+    <%= f.radio_button :usertype, 3 %> Normal user<br />
+    <%= f.submit "Submit" %>
+  <% end %>
 <% end %>
